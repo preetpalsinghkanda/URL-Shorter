@@ -3,7 +3,7 @@ import logo from "../assets/logo.svg";
 
 const NavBar = () => {
   return (
-    <div className="min-w-6xl justify-between flex my-10 items-center border-black">
+    <div className="min-w-6xl max-w-6xl justify-between flex my-10 items-center border-black">
       <div className="flex gap-12">
         <img src={logo} alt="" />
         <div className="text-md font-[700] flex gap-8 text-[#9e9aa7]">
