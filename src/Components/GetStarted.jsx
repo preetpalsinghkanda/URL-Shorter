@@ -15,9 +15,9 @@ const GetStarted = () => {
           </p>
         </div>
 
-        <button className="text-white px-8  rounded-4xl py-2 bg-[#2acfcf] font-[500] text-xl"> Get Started</button>
+        <button className="text-white px-8  rounded-4xl py-3 bg-[#2acfcf] font-[500] text-xl"> Get Started</button>
       </div>
-      <div>
+      <div className="overflow-hidden">
         <img className="absolute -right-20 h-120 top-40" src={girlWithComputer} alt="" />
       </div>
     </div>

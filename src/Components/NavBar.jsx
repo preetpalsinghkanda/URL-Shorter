@@ -16,7 +16,7 @@ const NavBar = () => {
         <button className="text-md font-[700] flex gap-8 text-[#9e9aa7]">
           Login
         </button>
-        <button className="text-white px-4  rounded-2xl py-1 bg-[#2acfcf] font-[700] text-md">
+        <button className="text-white px-5  rounded-4xl py-2 bg-[#2acfcf] font-[700] text-md">
           Sign Up
         </button>
       </div>
