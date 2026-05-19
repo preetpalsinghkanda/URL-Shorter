@@ -3,7 +3,7 @@ import girlWithComputer from '../assets/illustration-working.svg'
 
 const GetStarted = () => {
   return (
-    <div className="min-w-6xl max-w-6xl my-22 flex ">
+    <div className="min-w-6xl max-w-6xl my-22 flex  ">
       <div className="flex flex-col items-start gap-8">
         <div className="">
           <h1 className="text-7xl/20 font-[700] text-[#35323e]">

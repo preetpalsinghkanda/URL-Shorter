@@ -4,7 +4,7 @@ import shortenBg from "../assets/bg-shorten-desktop.svg";
 
 const Link = () => {
   return (
-    <div className=" shorten rounded-xl min-w-6xl max-w-6xl  my-30 flex justify-between py-14 px-16 gap-6">
+    <div className=" shorten rounded-xl min-w-6xl max-w-6xl relative top-30  flex justify-between py-14 px-16 gap-6">
       <input
         type="text"
         placeholder="Shorten a line here..."
