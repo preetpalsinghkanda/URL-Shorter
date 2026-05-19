@@ -2,6 +2,8 @@ import React from 'react'
 import NavBar from './Components/NavBar'
 import GetStarted from './Components/GetStarted'
 import Link from './Components/Link'
+import AdvancedStatistics from './Components/AdvancedStatistics'
+import Promo from './Components/Promo'
 
 const App = () => {
   return (
@@ -9,6 +11,10 @@ const App = () => {
       <NavBar/>
       <GetStarted/>
       <Link/>
+      {/* <AdvancedStatistics/> */}
+      <Promo/>
+
+
 
     </div>
   )
