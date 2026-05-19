@@ -4,6 +4,7 @@ import GetStarted from './Components/GetStarted'
 import Link from './Components/Link'
 import AdvancedStatistics from './Components/AdvancedStatistics'
 import Promo from './Components/Promo'
+import Footer from './Components/Footer'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Link/>
       {/* <AdvancedStatistics/> */}
       <Promo/>
+      <Footer/>
 
 
 
