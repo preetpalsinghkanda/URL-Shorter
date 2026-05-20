@@ -7,7 +7,7 @@ const NavBar = () => {
   const [menuOpened, setMenuOpened] = useState(false);
 
   return (
-    <div className="w-full max-w-6xl justify-between flex my-10 items-center border-black">
+    <div className="w-full mx-auto max-w-6xl justify-between flex my-10 items-center border-black">
       <div className="flex gap-12">
         <img src={logo} alt="" />
         <div className="text-md font-[700] gap-8 text-[#9e9aa7] md:flex items-center hidden">
