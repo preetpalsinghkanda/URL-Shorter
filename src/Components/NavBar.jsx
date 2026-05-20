@@ -30,7 +30,7 @@ const NavBar = () => {
       </div>
 
       {menuOpened && (
-        <div className="border text-[#ffffffdc] absolute left-1/2 -translate-x-1/2 top-25 rounded-lg  py-10 w-80 bg-[#3b3054] px-6">
+        <div className="border z-20 text-[#ffffffdc] absolute left-1/2 -translate-x-1/2 top-25 rounded-lg  py-10 w-80 bg-[#3b3054] px-6">
           <div className="flex flex-col text-md font-[700] gap-6  items-center">
             <span>Features</span>
             <span>Pricing</span>

@@ -18,10 +18,17 @@ const App = () => {
 <div className="lg:px-6 px-0 w-full">
   <GetStarted />
 </div>
-  {/* <div className="px-10 w-full">
-    <AdvancedStatisticsFull />
-    <Promo />
-  </div> */}
+
+<div className="px-6 w-full">
+<Link/>
+</div>
+
+
+ <div className=" w-full">
+  
+    {/* <AdvancedStatisticsFull />
+    <Promo /> */}
+  </div> 
 
 </div>
   );
