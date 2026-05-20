@@ -11,7 +11,7 @@ const App = () => {
   return (
    <div className="flex items-center flex-col">
   
-  <div className="px-6 w-full">
+  {/* <div className="px-6 w-full">
     <NavBar />
   </div>
 
@@ -21,13 +21,13 @@ const App = () => {
 
 <div className="px-6 w-full">
 <Link/>
-</div>
+</div> */}
 
 
  <div className=" w-full">
   
-    {/* <AdvancedStatisticsFull />
-    <Promo /> */}
+    <AdvancedStatisticsFull />
+    {/* <Promo />  */}
   </div> 
 
 </div>
