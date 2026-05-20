@@ -15,8 +15,9 @@ const App = () => {
     <NavBar />
   </div>
 
+<div className="lg:px-6 px-0 w-full">
   <GetStarted />
-
+</div>
   {/* <div className="px-10 w-full">
     <AdvancedStatisticsFull />
     <Promo />
