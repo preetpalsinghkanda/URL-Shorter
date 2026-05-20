@@ -18,7 +18,11 @@
 @media(max-width:640px){
 
     .shorten{
-        background-image: url('/src/assets//bg-shorten-mobile.svg');
+        background-image: url('/src/assets/bg-shorten-mobile.svg');
+    }
+
+    .promo{
+        background-image: url('/src/assets/bg-boost-mobile.svg');
     }
 
 }

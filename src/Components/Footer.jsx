@@ -7,12 +7,12 @@ import instagram from "../assets/icon-instagram.svg";
 
 const Footer = () => {
   return (
-    <div className=" bg-[#232127] w-full">
-      <div className="min-w-6xl max-w-6xl  mx-auto py-16 items-start text-white justify-between flex">
+    <div className=" bg-[#232127] w-full ">
+      <div className="w-full items-center px-4 flex-col lg:gap-0 gap-14 max-w-6xl  mx-auto py-16 lg:items-start text-white justify-between flex lg:flex-row">
         <img src={logo} alt="" className="brightness-0 invert" />
 
-        <div className="flex gap-30">
-          <div className="flex gap-20">
+        <div className="flex lg:gap-30 gap-15 md:flex-row flex-col">
+          <div className="flex lg:gap-20 gap-12 sm:flex-row flex-col text-center">
             <div className="flex flex-col gap-6">
               <h6 className="text-lg font-semibold">Features</h6>
               <div className="flex flex-col gap-3 text-[#9e9aa7] font-[500]">
@@ -41,7 +41,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex items-start gap-7">
+          <div className="flex items-start lg:justify-start  justify-center  gap-7">
             <img src={facebook} alt="" />
             <img src={twitter} alt="" />
             <img src={pinterest} alt="" />
