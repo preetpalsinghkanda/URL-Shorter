@@ -2,27 +2,55 @@ import React, { useState } from "react";
 import "../App.css";
 import shortenBg from "../assets/bg-shorten-desktop.svg";
 
-const Link = () => {
+const Link = ({ inputArr, setInputArr }) => {
   const [inputValue, setInputValue] = useState("");
   const [inputErr, setInputErr] = useState(false);
 
-  function InputCheck() {
+  const [shortURL, setShortURL] = useState("");
+
+  async function InputCheck() {
     if (!inputValue.trim()) {
       setInputErr(true);
     } else {
       setInputErr(false);
+
+      try {
+        const shortURLResponse = await fetch("https://spoo.me/api/v1/shorten", {
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json",
+
+            Authorization:
+              "Bearer spoo_tnU5HVEi3dYc-AqJUWmXzzYVgy-SqE0Kh5mGoLlIcI8",
+          },
+
+          body: JSON.stringify({
+            long_url: inputValue,
+          }),
+        });
+
+        if (!shortURLResponse.ok) {
+          throw new Error("Failed to short URL");
+        }
+
+        const responseData = await shortURLResponse.json();
+
+        setInputArr((prev) => [responseData, ...prev].slice(0, 3));
+      } catch (err) {
+        alert(err);
+      }
     }
   }
 
   return (
-    
     <div className="  mx-auto z-20 relative -mt-26  lg:-mt-22   shorten rounded-xl max-w-6xl  sm:flex-row flex-col flex justify-between sm:py-14 p-7 sm:px-16 sm:gap-7 gap-9">
       <input
         value={inputValue}
         onChange={(x) => setInputValue(x.target.value)}
         type="text"
         placeholder="Shorten a line here..."
-        className={ ` ${inputErr ? "placeholder:text-[#fc5555a7] border-3 border-[#fc5555]" : ""}  outline-0 flex-1 bg-[white] lg:px-8 px-4 text-xl py-4 rounded-lg `}
+        className={` ${inputErr ? "placeholder:text-[#fc5555a7] border-3 border-[#fc5555]" : ""}  outline-0 flex-1 bg-[white] lg:px-8 px-4 text-xl py-4 rounded-lg `}
       />
 
       {inputErr && (
@@ -37,7 +65,6 @@ const Link = () => {
       >
         Shorten it!
       </button>
-
     </div>
   );
 };
