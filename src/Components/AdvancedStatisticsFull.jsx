@@ -1,7 +1,7 @@
 import React from "react";
 import AdvancedStatistic from "./AdvancedStatistic";
 import detailedRecords from "../assets/icon-detailed-records.svg";
-import fullCustomizable from "../assets/icon-fully-Customizable.svg";
+import fullCustomizable from "../assets/icon-fully-customizable.svg";
 import brandRecognition from "../assets/icon-brand-recognition.svg";
 
 const AdvancedStatisticsFull = () => {
