@@ -6,6 +6,7 @@ import AdvancedStatisticsFull from "./Components/AdvancedStatisticsFull";
 import Promo from "./Components/Promo";
 import Footer from "./Components/Footer";
 import AdvancedStatistic from "./Components/AdvancedStatistic";
+import LinkFull from "./Components/LinkFull";
 
 const App = () => {
   return (
@@ -19,12 +20,13 @@ const App = () => {
   <GetStarted />
 </div>
 
-<div className="px-6 w-full">
-<Link/>
-</div> 
+<div className=" w-full">
+  <LinkFull/>
+</div>
 
 
  <div className=" w-full">
+  
   
     <AdvancedStatisticsFull />
      <Promo />  

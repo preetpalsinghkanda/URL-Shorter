@@ -6,7 +6,7 @@ import brandRecognition from "../assets/icon-brand-recognition.svg";
 
 const AdvancedStatisticsFull = () => {
   return (
-    <div className="pt-55 pb-30 w-full items-center flex justify-center bg-[#EFF1F7] ">
+    <div className="pt-35 pb-30 w-full items-center flex justify-center bg-[#EFF1F7] ">
       <div className=" max-w-6xl w-full mx-auto flex gap-30 flex-col items-center ">
         <div className="text-center flex gap-4 flex-col">
           <h2 className="lg:text-4xl text-3xl font-[700] text-[#232127]">
