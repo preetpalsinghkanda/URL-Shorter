@@ -24,8 +24,7 @@ const GetStarted = () => {
           </p>
         </div>
 
-        <button className="text-white px-8 w-fit  rounded-4xl py-3 bg-[#2acfcf] font-[500] text-xl">
-          {" "}
+        <button className="text-white px-8 w-fit hover:bg-[#2acfcf84] cursor-pointer rounded-4xl py-3 bg-[#2acfcf] font-[500] text-xl">
           Get Started
         </button>
       </div>

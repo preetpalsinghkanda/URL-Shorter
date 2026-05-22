@@ -10,7 +10,7 @@ const Link = () => {
         placeholder="Shorten a line here..."
         className=" outline-0 flex-1 bg-[white] lg:px-8 px-4 text-xl py-4 rounded-lg "
       />
-      <button className="bg-[#2acfcf] text-white px-10 py-4 font-semibold  text-xl rounded-lg">
+      <button className="bg-[#2acfcf] hover:bg-[#80fbfb] cursor-pointer text-white px-10 py-4 font-semibold  text-xl rounded-lg">
         Shorten it!
       </button>
     </div>

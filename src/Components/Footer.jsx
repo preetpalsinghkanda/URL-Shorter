@@ -1,10 +1,13 @@
 import React from "react";
 import logo from "../assets/logo.svg";
-import facebook from "../assets/icon-facebook.svg";
-import twitter from "../assets/icon-twitter.svg";
-import pinterest from "../assets/icon-pinterest.svg";
-import instagram from "../assets/icon-instagram.svg";
+import {
+  logoFacebook,
+  logoTwitter,
+  logoPinterest,
+  logoInstagram,
+} from "ionicons/icons";
 
+import { IonIcon } from "@ionic/react";
 const Footer = () => {
   return (
     <div className=" bg-[#232127] w-full ">
@@ -16,36 +19,71 @@ const Footer = () => {
             <div className="flex flex-col gap-6">
               <h6 className="text-lg font-semibold">Features</h6>
               <div className="flex flex-col gap-3 text-[#9e9aa7] font-[500]">
-                <span>Link Shortening</span>
-                <span>Branded Links</span>
-                <span>Analytics</span>
+                <span className="cursor-pointer hover:text-[#2acfcf]">
+                  Link Shortening
+                </span>
+                <span className="cursor-pointer hover:text-[#2acfcf]">
+                  Branded Links
+                </span>
+                <span className="cursor-pointer hover:text-[#2acfcf]">
+                  Analytics
+                </span>
               </div>
             </div>
 
             <div className="flex flex-col gap-6">
               <h6 className="text-lg font-semibold">Resources</h6>
               <div className="flex flex-col gap-3 text-[#9e9aa7] font-[500]">
-                <span>Blog</span>
-                <span>Developers</span>
-                <span>Support</span>
+                <span className="cursor-pointer hover:text-[#2acfcf]">
+                  Blog
+                </span>
+                <span className="cursor-pointer hover:text-[#2acfcf]">
+                  Developers
+                </span>
+                <span className="cursor-pointer hover:text-[#2acfcf]">
+                  Support
+                </span>
               </div>
             </div>
             <div className="flex flex-col gap-6">
               <h6 className="text-lg font-semibold">Company</h6>
               <div className="flex flex-col gap-3 text-[#9e9aa7] font-[500]">
-                <span>About</span>
-                <span>Our Team</span>
-                <span>Careers</span>
-                <span>Contact</span>
+                <span className="cursor-pointer hover:text-[#2acfcf]">
+                  About
+                </span>
+                <span className="cursor-pointer hover:text-[#2acfcf]">
+                  Our Team
+                </span>
+                <span className="cursor-pointer hover:text-[#2acfcf]">
+                  Careers
+                </span>
+                <span className="cursor-pointer hover:text-[#2acfcf]">
+                  Contact
+                </span>
               </div>
             </div>
           </div>
 
-          <div className="flex items-start lg:justify-start  justify-center  gap-7">
-            <img src={facebook} alt="" />
-            <img src={twitter} alt="" />
-            <img src={pinterest} alt="" />
-            <img src={instagram} alt="" />
+          <div className="flex items-start lg:justify-start justify-center gap-6 text-3xl">
+            <IonIcon
+              icon={logoFacebook}
+              className=" cursor-pointer hover:text-[#2acfcf] text-white transition"
+            />
+
+            <IonIcon
+              icon={logoTwitter}
+              className="  cursor-pointer hover:text-[#2acfcf] text-white transition"
+            />
+
+            <IonIcon
+              icon={logoPinterest}
+              className="  cursor-pointer hover:text-[#2acfcf] text-white transition"
+            />
+
+            <IonIcon
+              icon={logoInstagram}
+              className="  cursor-pointer hover:text-[#2acfcf] text-white transition"
+            />
           </div>
         </div>
       </div>
