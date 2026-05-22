@@ -7,6 +7,13 @@ Note: This project uses a URL Shortener API to generate shortened links.
 
 ---
 
+# Live Link 
+
+
+https://shortlyyyyy.netlify.app/
+
+---
+
 # Features
 
 * Shorten long URL's instantly
