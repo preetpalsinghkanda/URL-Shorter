@@ -1,16 +1,37 @@
-# React + Vite
+# Shortly (URL Shortening App)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Shortly is a modern and responsive URL shortening application built with React JS and Tailwind CSS.
+It allows users to shorten long URL's, copy links instantly to the clipboard, and manage generated links through a clean and interactive interface .
 
-Currently, two official plugins are available:
+Note: This project uses a URL Shortener API to generate shortened links.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+# Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Shorten long URL's instantly
+* On click copy to clipboard
+* Fully responsive (Mobile also)
+* Modern UI with Tailwind CSS
+* React JS
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Built With
+
+* React JS
+* Tailwind CSS
+* Ionicons
+* api - spoo.me/
+
+---
+
+# Screenshot
+
+<img width="1710" height="981" alt="download" src="https://github.com/user-attachments/assets/f37f670c-c0da-4a27-aa36-ba121bc1f117" />
+
+
+---
+
+
+Made with love and a cup of coffee by me
