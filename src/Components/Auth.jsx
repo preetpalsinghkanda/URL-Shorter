@@ -11,6 +11,14 @@ const Auth = ({ heading, btnName, switchPage, switchBtn, route }) => {
   const [emailErr, setEmailErr] = useState("");
   const [passErr, setPassErr] = useState("");
 
+
+  function handleEmailAndPass(){
+    setEmail("");
+    setPass("");
+    return
+  }
+
+
   function hanleAuth() {
     setEmailErr("");
     setPassErr("");
@@ -101,7 +109,7 @@ const Auth = ({ heading, btnName, switchPage, switchBtn, route }) => {
           <p className="flex gap-1">
             {switchPage}
             <span
-              onClick={() => navigate(route)}
+              onClick={() => {navigate(route), handleEmailAndPass()}}
               className="text-[#2ACFCF] cursor-pointer font-[500]"
             >
               {switchBtn}
