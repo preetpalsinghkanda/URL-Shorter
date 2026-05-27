@@ -44,6 +44,7 @@ const App = () => {
               btnName={"Signup"}
               switchPage={"Have an account?"}
               switchBtn={"Log in"}
+              route={"/login"}
             />
           }
         />
@@ -55,6 +56,7 @@ const App = () => {
               btnName={"Login"}
               switchPage={"Don't have an account?"}
               switchBtn={"Sign up"}
+              route={"/signup"}
             />
           }
         />

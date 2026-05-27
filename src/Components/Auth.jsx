@@ -1,7 +1,10 @@
 import React from "react";
 import logo from "../assets/logo.svg";
+import { useNavigate } from "react-router-dom";
 
-const Auth = ({heading , btnName , switchPage , switchBtn}) => {
+const Auth = ({ heading, btnName, switchPage, switchBtn, route }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="h-screen flex justify-center items-center">
       <div className="border-3 border-[#0000001d] py-8   min-w-md  px-10 flex rounded-3xl justify-center items-center flex-col">
@@ -30,7 +33,12 @@ const Auth = ({heading , btnName , switchPage , switchBtn}) => {
           </button>
 
           <p className="flex gap-1">
-            {switchPage}<span className="text-[#2ACFCF] font-[500]">{switchBtn}</span>
+            {switchPage}
+            <span  onClick={()=>navigate(route)} className="text-[#2ACFCF] cursor-pointer font-[500]">{switchBtn}</span>
+          </p>
+
+          <p onClick={()=>navigate("/")} className=" py-1 cursor-pointer my-2 px-3 rounded-2xl bg-[#2acfcf48]  text-[#0000007f]">
+            Back To Home
           </p>
         </div>
       </div>

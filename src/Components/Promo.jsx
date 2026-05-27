@@ -7,7 +7,7 @@ const Promo = () => {
       <h3 className="lg:text-4xl text-2xl md:text-3xl font-[700] text-white">
         Boost your links today
       </h3>
-      <button className="text-white px-8 rounded-4xl py-3 hover:bg-[#80fbfb] cursor-pointer bg-[#2acfcf] font-[500] text-xl">
+      <button onClick={()=>document.getElementsByClassName("link")[0]?.scrollIntoView({behavior : "smooth"})} className="text-white px-8 rounded-4xl py-3 hover:bg-[#80fbfb] cursor-pointer bg-[#2acfcf] font-[500] text-xl">
         Get Started
       </button>
     </div>

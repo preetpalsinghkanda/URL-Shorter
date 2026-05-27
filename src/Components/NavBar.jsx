@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import logo from "../assets/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const [menuOpened, setMenuOpened] = useState(false);
+  const navigate = useNavigate() ;
 
   return (
     <div className="w-full mx-auto max-w-6xl justify-between flex my-10 items-center border-black">
@@ -17,10 +19,10 @@ const NavBar = () => {
         </div>
       </div>
       <div className="md:flex items-center gap-8 hidden">
-        <button className="text-md cursor-pointer font-[700] flex gap-8 text-[#9e9aa7]">
+        <button onClick={()=>navigate("/login")} className="text-md cursor-pointer font-[700] flex gap-8 text-[#9e9aa7]">
           Login
         </button>
-        <button className="text-white px-5 hover:bg-[#2acfcf84] cursor-pointer rounded-4xl py-2 bg-[#2acfcf] font-[700] text-md">
+        <button onClick={()=>navigate("/signup")} className="text-white px-5 hover:bg-[#2acfcf84] cursor-pointer rounded-4xl py-2 bg-[#2acfcf] font-[700] text-md">
           Sign Up
         </button>
       </div>

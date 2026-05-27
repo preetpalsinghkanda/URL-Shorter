@@ -44,7 +44,7 @@ const Link = ({ inputArr, setInputArr }) => {
   }
 
   return (
-    <div className="  mx-auto z-20 relative -mt-26  lg:-mt-22   shorten rounded-xl max-w-6xl  sm:flex-row flex-col flex justify-between sm:py-14 p-7 sm:px-16 sm:gap-7 gap-9">
+    <div  className="link mx-auto z-20 relative -mt-26  lg:-mt-22   shorten rounded-xl max-w-6xl  sm:flex-row flex-col flex justify-between sm:py-14 p-7 sm:px-16 sm:gap-7 gap-9">
       <input
         value={inputValue}
         onChange={(x) => setInputValue(x.target.value)}
