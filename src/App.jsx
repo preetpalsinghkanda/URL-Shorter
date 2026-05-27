@@ -9,10 +9,12 @@ import AdvancedStatistic from "./Components/AdvancedStatistic";
 import LinkFull from "./Components/LinkFull";
 import Auth from "./Components/Auth";
 import { Routes, Route } from "react-router-dom";
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
   return (
     <div className="flex items-center flex-col">
+      <Toaster />
       <Routes>
         <Route
           path="/"

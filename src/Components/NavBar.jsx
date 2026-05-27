@@ -18,13 +18,17 @@ const NavBar = () => {
           <span className="hover:text-black cursor-pointer">Resources</span>
         </div>
       </div>
-      <div className="md:flex items-center gap-8 hidden">
+      <div className="md:hidden items-center gap-8 hidden">
         <button onClick={()=>navigate("/login")} className="text-md cursor-pointer font-[700] flex gap-8 text-[#9e9aa7]">
           Login
         </button>
         <button onClick={()=>navigate("/signup")} className="text-white px-5 hover:bg-[#2acfcf84] cursor-pointer rounded-4xl py-2 bg-[#2acfcf] font-[700] text-md">
           Sign Up
         </button>
+      </div>
+
+      <div>
+        
       </div>
 
       <div onClick={() => setMenuOpened(!menuOpened)} className="md:hidden">
