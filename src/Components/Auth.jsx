@@ -58,7 +58,7 @@ const Auth = ({ heading, btnName, switchPage, switchBtn, route }) => {
   }
 
   return (
-    <div className="h-screen flex justify-center items-center w-full">
+    <div className="h-screen px-4  flex justify-center items-center w-full">
       <div className="border-3 border-[#0000001d] py-8 max-w-md w-full px-6 sm:px-10 flex rounded-3xl justify-center items-center flex-col">
         <img src={logo} alt="" className="h-8" />
 
@@ -114,6 +114,8 @@ const Auth = ({ heading, btnName, switchPage, switchBtn, route }) => {
           >
             Back To Home
           </p>
+
+          <p className="my-4 text-sm">Note : only one user allowed</p>
         </div>
       </div>
     </div>

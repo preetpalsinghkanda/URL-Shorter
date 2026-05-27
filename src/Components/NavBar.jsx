@@ -3,13 +3,22 @@ import logo from "../assets/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const NavBar = () => {
   const [menuOpened, setMenuOpened] = useState(false);
-  const navigate = useNavigate() ;
+  const navigate = useNavigate();
+
+  const isUserLoggedIn = localStorage.getItem("isloggedIn");
+
+  function handleLogout(){
+    localStorage.removeItem("isloggedIn")
+    toast.success("Logout successfully")
+    navigate("/")
+  }
 
   return (
-    <div className="w-full mx-auto max-w-6xl justify-between flex my-10 items-center border-black">
+    <div className="w-full   mx-auto max-w-6xl justify-between flex my-10 items-center border-black">
       <div className="flex gap-12">
         <img src={logo} alt="" />
         <div className="text-md font-[700] gap-8 text-[#9e9aa7]  md:flex items-center hidden">
@@ -18,18 +27,39 @@ const NavBar = () => {
           <span className="hover:text-black cursor-pointer">Resources</span>
         </div>
       </div>
-      <div className="md:hidden items-center gap-8 hidden">
-        <button onClick={()=>navigate("/login")} className="text-md cursor-pointer font-[700] flex gap-8 text-[#9e9aa7]">
-          Login
-        </button>
-        <button onClick={()=>navigate("/signup")} className="text-white px-5 hover:bg-[#2acfcf84] cursor-pointer rounded-4xl py-2 bg-[#2acfcf] font-[700] text-md">
-          Sign Up
-        </button>
-      </div>
 
-      <div>
-        
-      </div>
+      {isUserLoggedIn ? (
+        <div className="md:flex items-center gap-2 hidden">
+          <span
+            style={{ fontSize: "40px", color: "#35323E" }}
+            className="material-symbols-outlined "
+          >
+            account_circle
+          </span>
+          <span
+          onClick={()=>handleLogout()}
+            style={{ color: "red", cursor: "pointer" }}
+            className="material-symbols-outlined"
+          >
+            logout
+          </span>
+        </div>
+      ) : (
+        <div className="md:flex items-center gap-8 hidden">
+          <button
+            onClick={() => navigate("/login")}
+            className="text-md cursor-pointer font-[700] flex gap-8 text-[#9e9aa7]"
+          >
+            Login
+          </button>
+          <button
+            onClick={() => navigate("/signup")}
+            className="text-white px-5 hover:bg-[#2acfcf84] cursor-pointer rounded-4xl py-2 bg-[#2acfcf] font-[700] text-md"
+          >
+            Sign Up
+          </button>
+        </div>
+      )}
 
       <div onClick={() => setMenuOpened(!menuOpened)} className="md:hidden">
         <FontAwesomeIcon icon={faBars} className="text-3xl text-[#9e9aa7]" />
@@ -43,12 +73,25 @@ const NavBar = () => {
             <span className="cursor-pointer">Resources</span>
           </div>
           <hr className="my-6 text-[#ffffff38]" />
-          <div className="flex  flex-col items-center gap-6 text-white font-[700] text-md ">
-            <button className=" flex gap-8 ">Login</button>
-            <button className=" px-5 w-full  rounded-4xl py-2 bg-[#2acfcf]  ">
-              Sign Up
-            </button>
-          </div>
+
+          {isUserLoggedIn ? (
+            <div onClick={()=>{handleLogout() , setMenuOpened(false)}} className="flex cursor-pointer font-[700] justify-center items-center text-[#ffffffdc]  gap-2">
+              <span className="">Logout</span>
+              <span
+                style={{ color: "red", cursor: "pointer" }}
+                className="material-symbols-outlined"
+              >
+                logout
+              </span>
+            </div>
+          ) : (
+            <div className="flex  flex-col items-center gap-6 text-white font-[700] text-md ">
+              <button onClick={()=> {navigate("/login"), setMenuOpened(false)}} className=" flex gap-8 ">Login</button>
+              <button onClick={()=>{navigate("/signup"), setMenuOpened(false)}} className=" px-5 w-full  rounded-4xl py-2 bg-[#2acfcf]  ">
+                Sign Up
+              </button>
+            </div>
+          )}
         </div>
       )}
     </div>
