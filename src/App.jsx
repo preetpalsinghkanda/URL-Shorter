@@ -7,12 +7,13 @@ import Promo from "./Components/Promo";
 import Footer from "./Components/Footer";
 import AdvancedStatistic from "./Components/AdvancedStatistic";
 import LinkFull from "./Components/LinkFull";
+import Auth from "./Components/Auth";
 
 const App = () => {
   return (
    <div className="flex items-center flex-col">
   
-  <div className="px-6 w-full">
+  {/* <div className="px-6 w-full">
     <NavBar />
   </div>
 
@@ -31,7 +32,9 @@ const App = () => {
     <AdvancedStatisticsFull />
      <Promo />  
      <Footer/>
-  </div> 
+  </div>  */}
+
+  <Auth/>
 
 </div>
   );
