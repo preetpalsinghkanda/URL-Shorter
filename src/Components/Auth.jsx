@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../assets/logo.svg";
 
-const Auth = () => {
+const Auth = ({heading , btnName , switchPage , switchBtn}) => {
   return (
     <div className="h-screen flex justify-center items-center">
       <div className="border-3 border-[#0000001d] py-8   min-w-md  px-10 flex rounded-3xl justify-center items-center flex-col">
@@ -9,7 +9,7 @@ const Auth = () => {
 
         <div className="w-full flex flex-col items-center">
           <h2 className="text-4xl my-10 font-[700] text-[#35323E]">
-            Create Account
+            {heading}
           </h2>
 
           <div className="flex flex-col w-full gap-4">
@@ -26,12 +26,11 @@ const Auth = () => {
           </div>
 
           <button className="border my-4 bg-[#2ACFCF]   w-full text-xl text-white font-bold py-2 rounded-4xl">
-            Signup
+            {btnName}
           </button>
 
-          <p>
-            Have an account?{" "}
-            <span className="text-[#2ACFCF] font-[500]">Log in</span>
+          <p className="flex gap-1">
+            {switchPage}<span className="text-[#2ACFCF] font-[500]">{switchBtn}</span>
           </p>
         </div>
       </div>
