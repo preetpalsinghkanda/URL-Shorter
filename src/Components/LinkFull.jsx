@@ -25,7 +25,7 @@ const LinkFull = () => {
               key={index}
               className="bg-white flex-col items-start lg:flex-row flex justify-between md:items-center px-6 py-3 font-[500] text-lg rounded-lg"
             >
-              <span className="line-clamp-1">{item.long_url}</span>
+              <span className="truncate max-w-60 sm:max-w-100">{item.long_url}</span>
 
               <hr className="lg:hidden w-full border-gray-300 my-3" />
 

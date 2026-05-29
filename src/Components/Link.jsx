@@ -14,29 +14,36 @@ const Link = ({ inputArr, setInputArr }) => {
     } else {
       setInputErr(false);
 
+      let url = inputValue.trim()
+
+      if(!url.startsWith("http://") && !url.startsWith("https://")){
+        url = `https://${url}`
+      }
+
       try {
-        const shortURLResponse = await fetch("https://spoo.me/api/v1/shorten", {
+
+        const formData = new FormData()
+        formData.append("link" , url);
+        const shortURLResponse = await fetch("https://lnk.ua/api/v1/link/create", {
           method: "POST",
-
-          headers: {
-            "Content-Type": "application/json",
-
-            Authorization:
-              "Bearer spoo_tnU5HVEi3dYc-AqJUWmXzzYVgy-SqE0Kh5mGoLlIcI8",
+          headers: {Accept: "application/json", Authorization:"Bearer 260|AEHuE9O7RTdrsP7ZQMOIdADPJFbswQ04bHLakYfL89da358d",
           },
 
-          body: JSON.stringify({
-            long_url: inputValue,
-          }),
+          body: formData,
         });
+
+
+        const responseData = await shortURLResponse.json()
 
         if (!shortURLResponse.ok) {
           throw new Error("Failed to short URL");
         }
 
-        const responseData = await shortURLResponse.json();
 
-        setInputArr((prev) => [responseData, ...prev].slice(0, 3));
+        setInputArr((prev) => [{
+          long_url : url,
+          short_url : responseData.result.lnk,
+        }, ...prev].slice(0, 3));
       } catch (err) {
         alert(err);
       }
@@ -49,7 +56,7 @@ const Link = ({ inputArr, setInputArr }) => {
         value={inputValue}
         onChange={(x) => setInputValue(x.target.value)}
         type="text"
-        placeholder="Shorten a line here..."
+        placeholder="Shorten a link here..."
         className={` ${inputErr ? "placeholder:text-[#fc5555a7] border-3 border-[#fc5555]" : ""}  outline-0 flex-1 bg-[white] lg:px-8 px-4 text-xl py-4 rounded-lg `}
       />
 
